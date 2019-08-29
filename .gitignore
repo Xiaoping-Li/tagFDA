@@ -1,3 +1,6 @@
+# drugs data files
+drugsatfda20190827/
+
 # Logs
 logs
 *.log
@@ -59,3 +62,5 @@ typings/
 
 # next.js build output
 .next
+
+

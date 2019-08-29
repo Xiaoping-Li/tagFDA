@@ -1,4 +1,4 @@
-const drug_file = './drugsatfda20190827/Products.txt';
+const drug_file = './drugsatfda20190827/MarketingStatus.txt';
 
 const readline = require('readline');
 const fs = require('fs');
@@ -17,7 +17,18 @@ function parseLine(line) {
 function createRowObject(values) {
   const rowobject = {};
   colNames.forEach((val, idx) => {
-    if (val !== 'ReferenceDrug' && val !== 'ReferenceStandard') {
+    if (val === 'MarketingStatusID') {
+      if (values[idx] === '1') {
+        rowobject['MarketingStatus'] = 'Prescription';
+      } else if (values[idx] === '2') {
+        rowobject['MarketingStatus'] = 'Over-the-counter';
+      } else if (values[idx] === '3') {
+        rowobject['MarketingStatus'] = 'Discontinued';
+      } else {
+        rowobject['MarketingStatus'] = 'None (Tentative Approval)';
+      }
+      
+    } else {
       rowobject[val] = values[idx];
     }
   });

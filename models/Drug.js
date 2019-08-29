@@ -2,35 +2,35 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const DrugSchema = new Schema({
-  drugName: {
+  DrugName: {
     type: String,
     required: [true, 'Drug name is required'],
     lowercase: true,
   },
-  applNo: {
+  ApplNo: {
     type: Number,
     required: true,
   },
-  productNo: {
+  ProductNo: {
     type: Number,
     required: true,
   },
-  form: {
+  Form: {
     type: String,
     required: [true, 'Form is required'],
     lowercase: true,
   },
-  strength: {
+  Strength: {
     type: String,
     required: [true, 'Strength is required'],
     lowercase: true,
   },
-  activeIngredient: {
+  ActiveIngredient: {
     type: String,
     required: [true, 'Active Ingredient is required'],
     lowercase: true,
   },
-  marketingStatus: {
+  MarketingStatus: {
     type: String,
     enum: ['Prescription', 'Over-the-counter', 'Discontinued', 'None (Tentative Approval)'],
   },

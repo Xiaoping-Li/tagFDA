@@ -8,7 +8,7 @@ const server = express();
 
 const db = require('./config/keys_dev').mongoURI;
 const Drugs = require('./models/Drug');
-const drugs = require('./populateProducts.js');
+const drugs = require('./scripts/populateProducts.js');
 
 // Setup some middleware
 server.use(bodyParser.urlencoded({ extended: false }));

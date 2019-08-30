@@ -1,4 +1,4 @@
-const drug_file = './drugsatfda20190827/Products.txt';
+const drug_file = '../drugsatfda20190827/Products.txt';
 
 const readline = require('readline');
 const fs = require('fs');

@@ -1,6 +1,6 @@
-const sponsers = require('./drugsatfda20190827/Applications.js');
-const products = require('./drugsatfda20190827/Products.js');
-const marketStatus = require('./drugsatfda20190827/MarketingStatus.js');
+const sponsers = require('../drugsatfda20190827/Applications.js');
+const products = require('../drugsatfda20190827/Products.js');
+const marketStatus = require('../drugsatfda20190827/MarketingStatus.js');
 
 // Populate Products with Sponsor name
 const populateProducts = (products, sponsers, marketStatus) => {

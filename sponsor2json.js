@@ -36,5 +36,5 @@ lineReader.on('line', function(line) {
 });
 
 lineReader.on('close', function() {
-  fs.writeFileSync(drug_file + '.json', JSON.stringify(json, null, 2));
+  fs.writeFileSync(drug_file + '.js', JSON.stringify(json, null, 2));
 });

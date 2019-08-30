@@ -26,8 +26,7 @@ function createRowObject(values) {
         rowobject['MarketingStatus'] = 'Discontinued';
       } else {
         rowobject['MarketingStatus'] = 'None (Tentative Approval)';
-      }
-      
+      } 
     } else {
       rowobject[val] = values[idx];
     }
@@ -47,5 +46,5 @@ lineReader.on('line', function(line) {
 });
 
 lineReader.on('close', function() {
-  fs.writeFileSync(drug_file + '.json', JSON.stringify(json, null, 2));
+  fs.writeFileSync(drug_file + '.js', JSON.stringify(json, null, 2));
 });

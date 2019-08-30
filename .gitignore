@@ -1,6 +1,9 @@
 # drugs data files
 drugsatfda20190827/
 
+# config files
+config/
+
 # Logs
 logs
 *.log
